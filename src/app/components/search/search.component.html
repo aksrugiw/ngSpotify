@@ -1,3 +1,8 @@
-<p>
-  search-component works!
-</p>
+<h1>I love music!</h1>
+<p class="lead">This is music searcher which use Angular 2 and spotify API.</p>
+
+<form>
+	<div class="form-group">
+		<input type="text" class="form-control" placeholder="What artist you looking for...?" [(ngModel)]="searchStr" name="searchStr" (keyup)="searchMusic()">
+	</div>
+</form>
