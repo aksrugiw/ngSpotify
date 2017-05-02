@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+.artist-thumb {
+	width: 80px;
+	height: auto;
+	float: left;
+	margin-right: 10px;
+}
