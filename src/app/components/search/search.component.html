@@ -6,3 +6,18 @@
 		<input type="text" class="form-control" placeholder="What artist you looking for...?" [(ngModel)]="searchStr" name="searchStr" (keyup)="searchMusic()">
 	</div>
 </form>
+
+<div *ngIf="results">
+	<div *ngFor="let item of results">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="well">
+					<h4>{{item.name}}</h4>
+					<div>
+						<strong>Genres:</strong><span *ngFor="let genre of item.genres">{{genre}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
