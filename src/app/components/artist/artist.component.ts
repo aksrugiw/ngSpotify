@@ -9,6 +9,7 @@ import { SpotifyService } from '../../services/spotify.service';
 })
 export class ArtistComponent implements OnInit {
 	artist: any;
+  albums: any;
 
   constructor(
   	private _spotifyService: SpotifyService,
@@ -23,7 +24,12 @@ export class ArtistComponent implements OnInit {
   			this._spotifyService.getArtist(id)
   				.subscribe(artist => {
   					this.artist = artist;
-  				})
+  				});
+
+        this._spotifyService.getAlbums(id)
+          .subscribe(albums => {
+            this.albums = albums.items
+          });
   		})
   }
 
