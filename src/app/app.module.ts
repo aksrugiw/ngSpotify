@@ -4,16 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { SearchComponentComponent } from './components/search-component/search-component.component';
-import { AboutComponentComponent } from './components/about-component/about-component.component';
-import { NavbarComponentComponent } from './components/navbar-component/navbar-component.component';
+import { SearchComponent } from './components/search/search.component';
+import { AboutComponent } from './components/about/about.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponentComponent,
-    AboutComponentComponent,
-    NavbarComponentComponent
+    SearchComponent,
+    AboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
