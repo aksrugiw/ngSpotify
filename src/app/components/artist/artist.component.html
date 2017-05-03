@@ -5,7 +5,7 @@
 		</div>
 		<h1>{{artist.name}}</h1>
 		<p *ngIf="artist.genres.length > 0">
-			Genres: <span *ngFor="let genre of artist.genres">{{genre}}</span>
+			Genres: <span class="label label-info label-genre" *ngFor="let genre of artist.genres">{{genre}}</span>
 		</p>
 	</header>
 </div>
@@ -13,7 +13,7 @@
 <div class="artist-albums">
 	<div class="row">
 		<div *ngFor="let album of albums">
-			<div class="col-xs-3">
+			<div class="col-xs-12 col-sm-4 col-md-3">
 				<div class="album well primary">
 					<img src="{{album.images[0].url}}" alt="" class="album-thumb img-thumbnail">
 					<h4>{{album.name}}</h4>
