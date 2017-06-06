@@ -17,19 +17,8 @@ export class SpotifyService {
 
   constructor(private _http: Http) { }
 
-  getToken() {
-    var headers = new Headers();
-    headers.append('Authorization', 'Basic ' + btoa(this.clientId + ':' + this.clientSecret));
-    headers.append('Content-Type', 'application/x-www-form-urlencoded');
-
-    this.reaquestUrl = 'https://accounts.spotify.com/api/token';
-    var content = 'grant_type=client_credentials';
-
-    return this._http.post(this.reaquestUrl, content, {headers: headers})
-      .map(res => res.json())
-      .subscribe(res => {
-        this.authToken = res.access_token;
-      });
+  setToken(token) {
+        this.authToken = token;
   }
 
   createTokenAuthorizationHeader() {
