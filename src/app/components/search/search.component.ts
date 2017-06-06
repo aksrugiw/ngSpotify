@@ -9,7 +9,9 @@ export class SearchComponent {
 	searchStr: string;
 	results: any;
 
-	constructor(private _spotifyService: SpotifyService) {}
+	constructor(private _spotifyService: SpotifyService) {
+		this._spotifyService.getToken();
+	}
 
 	searchMusic() {
 		this._spotifyService.searchMusic(this.searchStr)
