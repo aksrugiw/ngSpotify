@@ -9,7 +9,7 @@ import { SpotifyService } from '../../services/spotify.service';
 export class SearchComponent implements OnInit {
 	searchStr: string;
 	results: any;
-	redirectUrl = 'https://accounts.spotify.com/authorize?client_id=e446b0cd48a34b60842abe80ee692a5b&response_type=token&redirect_uri=github.com/aksrugiw/ngSpotify/';
+	redirectUrl = 'https://accounts.spotify.com/authorize?client_id=e446b0cd48a34b60842abe80ee692a5b&response_type=token&redirect_uri=https://github.com/aksrugiw/ngSpotify/';
 
 	constructor(private _spotifyService: SpotifyService, private activatedRoute: ActivatedRoute) {}
 
